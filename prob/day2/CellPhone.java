@@ -35,4 +35,15 @@ public class CellPhone {
     public void printBattery(){
         System.out.println("남은 배터리 양 : " + battery);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof CellPhone){
+            CellPhone c = (CellPhone) obj;
+            if(this.model.equals(c.model)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
